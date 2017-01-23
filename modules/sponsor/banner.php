@@ -30,8 +30,9 @@ else {
 
   // Link banner, if in online mode
   if ($cfg['sys_internet'] and $banner["sponsorid"]) $code = '<a href="index.php?mod=sponsor&amp;action=bannerclick&amp;design=base&amp;type=banner&amp;sponsorid='. $banner["sponsorid"] .'" target="_blank">'. $code .'</a>';
-  
-  $smarty->assign('MainBanner', $code);
+
+// No Banner please
+//  $smarty->assign('MainBanner', $code);
   unset($code);
 }
 
