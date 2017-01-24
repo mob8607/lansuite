@@ -221,7 +221,7 @@ class seat2 {
       if ($mode == 2 and $SVGWidth < 600) $SVGWidth = 600;
       ($SVGWidth < 250)? $SVGImgWidth = 250 : $SVGImgWidth = $SVGWidth;
   		$smarty->assign('SVGWidth', $SVGImgWidth);
-  		$smarty->assign('SVGHeight', $SVGHeight + 50);
+  		$smarty->assign('SVGHeight', $SVGHeight + 90);
 
       $HiddenFields = array();
       for ($x = 0; $x <= $block['cols']; $x++) for ($y = 0; $y <= $block['rows']; $y++) {
@@ -553,24 +553,24 @@ class seat2 {
 		$plan = $smarty->fetch('modules/seating/templates/plan.htm');
 
     if ($mode == 0) {    
-      $jscode .= "DrawSeatingSymbol(1, 0, ". ($YOffset + 50) .", '', '');\n";
-      $jscode .= "CreateText('". t('Frei') ."', ". 14 .", ". ($YOffset + 58) .", '');\n";
-      $jscode .= "DrawSeatingSymbol(2, 0, ". ($YOffset + 64) .", '', '');\n";
-      $jscode .= "CreateText('". t('Besetzt') ."', ". 14 .", ". ($YOffset + 72) .", '');\n";
-      $jscode .= "DrawSeatingSymbol(4, 0, ". ($YOffset + 78) .", '', '');\n";
-      if ($selected_user) $jscode .= "CreateText('". t('Auswahl') ."', ". 14 .", ". ($YOffset + 86) .", '');\n";
-      else $jscode .= "CreateText('". t('Dein Platz') ."', ". 14 .", ". ($YOffset + 86) .", '');\n";
-      $jscode .= "DrawSeatingSymbol(3, 0, ". ($YOffset + 92) .", '', '');\n";
-      $jscode .= "CreateText('". t('Vorgemerkt') ."', ". 14 .", ". ($YOffset + 100) .", '');\n";
+      $jscode .= "DrawSeatingSymbol(1, 0, ". ($YOffset + 90) .", '', '');\n";
+      $jscode .= "CreateText('". t('Frei') ."', ". 14 .", ". ($YOffset + 98) .", '');\n";
+      $jscode .= "DrawSeatingSymbol(2, 0, ". ($YOffset + 104) .", '', '');\n";
+      $jscode .= "CreateText('". t('Besetzt') ."', ". 14 .", ". ($YOffset + 112) .", '');\n";
+      $jscode .= "DrawSeatingSymbol(4, 0, ". ($YOffset + 118) .", '', '');\n";
+      if ($selected_user) $jscode .= "CreateText('". t('Auswahl') ."', ". 14 .", ". ($YOffset + 126) .", '');\n";
+      else $jscode .= "CreateText('". t('Dein Platz') ."', ". 14 .", ". ($YOffset + 126) .", '');\n";
+      $jscode .= "DrawSeatingSymbol(3, 0, ". ($YOffset + 132) .", '', '');\n";
+      $jscode .= "CreateText('". t('Vorgemerkt') ."', ". 14 .", ". ($YOffset + 140) .", '');\n";
 
-      $jscode .= "DrawSeatingSymbol(6, 100, ". ($YOffset + 50) .", '', '');\n";
-      $jscode .= "CreateText('". t('Frei (Ausgecheckt)') ."', ". 114 .", ". ($YOffset + 58) .", '');\n";
-      $jscode .= "DrawSeatingSymbol(8, 100, ". ($YOffset + 64) .", '', '');\n";
-      $jscode .= "CreateText('". t('Besetzt (Eingecheckt)') ."', ". 114 .", ". ($YOffset + 72) .", '');\n";
-      $jscode .= "DrawSeatingSymbol(5, 100, ". ($YOffset + 78) .", '', '');\n";
-      $jscode .= "CreateText('". t('Clanmate') ."', ". 114 .", ". ($YOffset + 86) .", '');\n";
-      $jscode .= "DrawSeatingSymbol(7, 100, ". ($YOffset + 92) .", '', '');\n";
-      $jscode .= "CreateText('". t('Gesperrt') ."', ". 114 .", ". ($YOffset + 100) .", '');\n";
+      $jscode .= "DrawSeatingSymbol(6, 100, ". ($YOffset + 90) .", '', '');\n";
+      $jscode .= "CreateText('". t('Frei (Ausgecheckt)') ."', ". 114 .", ". ($YOffset + 98) .", '');\n";
+      $jscode .= "DrawSeatingSymbol(8, 100, ". ($YOffset + 104) .", '', '');\n";
+      $jscode .= "CreateText('". t('Besetzt (Eingecheckt)') ."', ". 114 .", ". ($YOffset + 112) .", '');\n";
+      $jscode .= "DrawSeatingSymbol(5, 100, ". ($YOffset + 118) .", '', '');\n";
+      $jscode .= "CreateText('". t('Clanmate') ."', ". 114 .", ". ($YOffset + 126) .", '');\n";
+      $jscode .= "DrawSeatingSymbol(7, 100, ". ($YOffset + 132) .", '', '');\n";
+      $jscode .= "CreateText('". t('Gesperrt') ."', ". 114 .", ". ($YOffset + 140) .", '');\n";
   	}
 
     if ($mode != 3) $jscode .= ' }';
