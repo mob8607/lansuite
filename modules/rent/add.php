@@ -1,7 +1,6 @@
 <?php
 $dsp->NewContent(t('Verleih'), t('Neuen Artikel zum Verleih eintragen'));
 
-include_once('inc/classes/class_masterform.php');
 $mf = new masterform();
 
 $mf->AddField(t('Bezeichnung'), 'caption');
@@ -13,4 +12,3 @@ $mf->SendForm('index.php?mod=rent&action=add', 'rentstuff', 'stuffid', $_GET['st
 
 $dsp->AddBackButton('index.php?mod=rent');
 $dsp->AddContent();
-?>

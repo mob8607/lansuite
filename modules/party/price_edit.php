@@ -5,9 +5,10 @@ $selectrequire['0'] = t('Alle');
 $selectrequire['2'] = t('Admins und Superadmins');
 $selectrequire['3'] = t('Superadmins');
 
-if (!$_GET['party_id']) $_GET['party_id'] = $party->party_id;
+if (!$_GET['party_id']) {
+    $_GET['party_id'] = $party->party_id;
+}
 
-include_once('inc/classes/class_masterform.php');
 $mf = new masterform();
 
 $mf->AdditionalKey = 'party_id = '. (int)$_GET['party_id'];
@@ -24,5 +25,3 @@ $mf->AddField(t('Gültig bis'), 'enddate');
 $mf->SendForm('index.php?mod=party&action=price_edit&party_id='. $_GET['party_id'], 'party_prices', 'price_id', $_GET['price_id']);
 $dsp->AddBackButton('index.php?mod=party&action=price&party_id='. $_GET['party_id']);
 $dsp->AddContent();
-
-?>
