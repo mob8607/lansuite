@@ -1,23 +1,21 @@
 <?php
-switch($_GET['step']) {
-	default:
-    include_once('modules/wiki/search.php');
-	break;
 
-  // Delete whole post
-	case 2:
-    include_once('inc/classes/class_masterdelete.php');
-    $md = new masterdelete();
+switch ($_GET['step']) {
+    default:
+        include_once('modules/wiki/search.php');
+        break;
 
-    $md->Delete('wiki', 'postid', $_GET['postid']);
-  break;
+    // Delete whole post
+    case 2:
+        $md = new \LanSuite\MasterDelete();
 
-  // Delete one version
-	case 10:
-    include_once('inc/classes/class_masterdelete.php');
-    $md = new masterdelete();
+        $md->Delete('wiki', 'postid', $_GET['postid']);
+        break;
 
-    $md->Delete('wiki_versions', 'versionid', $_GET['versionid']);
-  break;
+    // Delete one version
+    case 10:
+        $md = new \LanSuite\MasterDelete();
+
+        $md->Delete('wiki_versions', 'versionid', $_GET['versionid']);
+        break;
 }
-?>

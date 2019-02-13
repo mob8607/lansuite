@@ -449,43 +449,43 @@ div.wikiH1 {
 /* Shoutbox */
 
 #shoutbox {
-	font-family: Arial,Helvetica,sans-serif;
-	font-size: 11px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
 }
 .shoutbox-list {
-	border-bottom: 1px solid #8DA2B4; 
-	padding: 3px;
+    border-bottom: 1px solid #8DA2B4;
+    padding: 3px;
 }
 #shoutbox-list {
-	text-align: left;
-	margin: 0px auto;
+    text-align: left;
+    margin: 0px auto;
 }
 #shoutbox-form {
-	text-align: left;
-	padding: 3px;
+    text-align: left;
+    padding: 3px;
 }
 #shoutsubmitline {
-	margin-top:3px;
+    margin-top:3px;
 }
 #shoutsubmit {
-	float: left;
+    float: left;
 }
 #shoutbox-status {
-	float:right;
-	padding-top:2px;
+    float:right;
+    padding-top:2px;
 }
 .shoutbox-list-time {
-	color: #8DA2B4;
+    color: #8DA2B4;
 }
 .shoutbox-list-nick {
-	margin-left: 5px;
-	font-weight: bold;
+    margin-left: 5px;
+    font-weight: bold;
 }
 .shoutbox-list-message {
-	margin-left: 5px;
+    margin-left: 5px;
 }
 #shoutdialog{
-	display:none;
+    display:none;
 }
 
 /*
