@@ -1,0 +1,55 @@
+{
+    "name": "lansuite/lansuite",
+    "description": "A Content Management System designed especially for the needs of LAN-Parties",
+    "type": "project",
+    "keywords": ["lanparty", "cms", "gaming", "esports"],
+    "homepage": "https://github.com/lansuite/lansuite",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "LanSuite-Team",
+            "homepage": "https://github.com/lansuite/lansuite/graphs/contributors"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "ext-gd": "*",
+        "ext-mysqli": "*",
+
+        "smarty/smarty": "^3.1",
+        "geshi/geshi": "^1.0.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "doctrine/instantiator": "~1.0.5"
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "bin-dir": "bin"
+    },
+    "suggest": {
+        "ext-snmp": "Required to use the \"Network Operation Center\" module."
+    },
+    "autoload": {
+        "classmap": [
+            "inc/classes/class.crypt.php",
+            "inc/classes/class_auth.php",
+            "inc/classes/class_barcode.php",
+            "inc/classes/class_barcode_system.php",
+            "inc/classes/class_db_mysql.php",
+            "inc/classes/class_debug.php",
+            "inc/classes/class_display.php",
+            "inc/classes/class_framework.php",
+            "inc/classes/class_func.php",
+            "inc/classes/class_gd.php",
+            "inc/classes/class_mastercomment.php",
+            "inc/classes/class_masterdelete.php",
+            "inc/classes/class_masterform.php",
+            "inc/classes/class_masterrate.php",
+            "inc/classes/class_plugin.php",
+            "inc/classes/class_sec.php",
+            "inc/classes/class_translation.php",
+            "inc/classes/class_xml.php"
+        ]
+    }
+}
